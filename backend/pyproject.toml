@@ -1,0 +1,68 @@
+[project]
+name = "ai-risk-investigator"
+version = "1.0.0"
+description = "Production AI Risk Investigator SaaS — document risk analysis with RAG"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn[standard]>=0.32.0",
+  "sqlalchemy[asyncio]>=2.0.36",
+  "asyncpg>=0.30.0",
+  "alembic>=1.14.0",
+  "pgvector>=0.3.6",
+  "pydantic>=2.9.0",
+  "pydantic-settings>=2.6.0",
+  "python-jose[cryptography]>=3.3.0",
+  "passlib[bcrypt]>=1.7.4",
+  "bcrypt>=4.0.1,<4.1",
+  "python-multipart>=0.0.12",
+  "httpx>=0.27.0",
+  "openai>=1.54.0",
+  "anthropic>=0.39.0",
+  "pypdf>=5.1.0",
+  "python-docx>=1.1.2",
+  "reportlab>=4.2.5",
+  "jinja2>=3.1.4",
+  "structlog>=24.4.0",
+  "opentelemetry-api>=1.28.0",
+  "opentelemetry-sdk>=1.28.0",
+  "opentelemetry-instrumentation-fastapi>=0.49b0",
+  "opentelemetry-exporter-otlp-proto-http>=1.28.0",
+  "slowapi>=0.1.9",
+  "email-validator>=2.2.0",
+  "tenacity>=9.0.0",
+  "orjson>=3.10.0",
+  "aiofiles>=24.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.0",
+  "pytest-asyncio>=0.24.0",
+  "pytest-cov>=6.0.0",
+  "httpx>=0.27.0",
+  "ruff>=0.7.0",
+  "mypy>=1.13.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.11"
+strict = false
+ignore_missing_imports = true

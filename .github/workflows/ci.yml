@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: |
+          pip install -e ".[dev]"
+      - name: Unit tests
+        env:
+          APP_ENV: test
+          DEMO_MODE: "true"
+          DEFAULT_LLM_PROVIDER: mock
+          JWT_SECRET_KEY: ci-test-secret
+          UPLOAD_DIR: /tmp/ari/uploads
+          KNOWLEDGE_DIR: /tmp/ari/knowledge
+          REPORT_DIR: /tmp/ari/reports
+        run: pytest -q
+
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install
+        run: npm install
+      - name: Build
+        run: npm run build
+        env:
+          NEXT_PUBLIC_API_URL: http://localhost:8000

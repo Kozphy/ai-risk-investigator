@@ -1,0 +1,134 @@
+openapi: 3.1.0
+info:
+  title: AI Risk Investigator API
+  version: 1.0.0
+  description: |
+    Production-oriented API for document risk analysis, RAG knowledge retrieval,
+    and audit report export. Live schema is also served at `/openapi.json` when the API is running.
+servers:
+  - url: http://localhost:8000
+paths:
+  /health:
+    get:
+      summary: Health check
+      responses:
+        "200":
+          description: OK
+  /api/v1/auth/register:
+    post:
+      summary: Register user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RegisterRequest"
+      responses:
+        "201":
+          description: Created
+  /api/v1/auth/login:
+    post:
+      summary: Login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LoginRequest"
+      responses:
+        "200":
+          description: Tokens
+  /api/v1/documents:
+    get:
+      summary: List documents
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Document list
+    post:
+      summary: Upload document (PDF/DOCX/TXT)
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                document_type:
+                  type: string
+      responses:
+        "201":
+          description: Uploaded
+  /api/v1/analyses:
+    post:
+      summary: Start risk analysis
+      security:
+        - bearerAuth: []
+      responses:
+        "202":
+          description: Accepted
+    get:
+      summary: List analyses
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Analyses
+  /api/v1/analyses/dashboard/stats:
+    get:
+      summary: Dashboard statistics
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Stats
+  /api/v1/knowledge:
+    post:
+      summary: Upload knowledge base document
+      security:
+        - bearerAuth: []
+      responses:
+        "201":
+          description: Indexed
+  /api/v1/reports:
+    post:
+      summary: Generate PDF/DOCX audit report
+      security:
+        - bearerAuth: []
+      responses:
+        "201":
+          description: Report created
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    RegisterRequest:
+      type: object
+      required: [email, password, full_name]
+      properties:
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+        full_name:
+          type: string
+        organization:
+          type: string
+    LoginRequest:
+      type: object
+      required: [email, password]
+      properties:
+        email:
+          type: string
+        password:
+          type: string

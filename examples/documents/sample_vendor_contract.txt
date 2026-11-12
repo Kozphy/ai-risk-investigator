@@ -1,0 +1,21 @@
+MASTER SERVICES AGREEMENT
+
+This Agreement is entered into between Acme Financial Services ("Customer") and CloudVendor Ltd ("Provider").
+
+1. Services
+Provider shall provide SaaS hosting and analytics services. Automated tools, including machine learning models, may be used to improve service delivery without prior notice.
+
+2. Liability and Indemnity
+The Provider shall indemnify the Customer without limitation for any claims arising from the Services. Provider's aggregate liability is uncapped. Customer waives consequential damages except for Provider breaches.
+
+3. Data Processing
+Personal data may be processed as needed for the services. Provider may engage subprocessors globally. Retention periods are determined by Provider operational needs. Breach notification will be provided within a commercially reasonable time.
+
+4. Access and Security
+Vendor personnel may access Customer systems as required to deliver support. Access credentials may be shared among Provider staff. Encryption of data at rest is recommended but not mandatory for all environments.
+
+5. Audit Rights
+Customer may request audit reports annually. On-site audits require 90 days notice and Provider approval.
+
+6. Governing Law
+This Agreement is governed by the laws of England and Wales.

@@ -1,0 +1,10 @@
+ISO/IEC 27001:2022 — Selected Controls
+
+A.5.19 Information security in supplier relationships
+Processes and procedures shall be defined and implemented to manage information security risks associated with the use of supplier products or services.
+
+A.8.2 Privileged access rights
+The allocation and use of privileged access rights shall be restricted and managed.
+
+A.8.10 Information deletion
+Information stored in information systems, devices or any other storage media shall be deleted when no longer required.

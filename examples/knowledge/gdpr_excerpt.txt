@@ -1,0 +1,10 @@
+GDPR — Key Control Excerpts (for RAG demo)
+
+Article 5(1)(e) Storage limitation
+Personal data shall be kept in a form which permits identification of data subjects for no longer than is necessary for the purposes for which the personal data are processed.
+
+Article 28 Processor
+Where processing is carried out on behalf of a controller, the controller shall use only processors providing sufficient guarantees. The processor shall not engage another processor without prior specific or general written authorisation.
+
+Article 33 Notification of a personal data breach
+In the case of a personal data breach, the controller shall without undue delay and, where feasible, not later than 72 hours after having become aware of it, notify the supervisory authority.

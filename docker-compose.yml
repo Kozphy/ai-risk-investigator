@@ -1,0 +1,56 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: risk
+      POSTGRES_PASSWORD: risk
+      POSTGRES_DB: ai_risk_investigator
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U risk -d ai_risk_investigator"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      APP_ENV: development
+      DEMO_MODE: "true"
+      DEFAULT_LLM_PROVIDER: mock
+      DATABASE_URL: postgresql+asyncpg://risk:risk@db:5432/ai_risk_investigator
+      DATABASE_URL_SYNC: postgresql://risk:risk@db:5432/ai_risk_investigator
+      JWT_SECRET_KEY: local-dev-secret-change-in-production
+      CORS_ORIGINS: http://localhost:3000
+      UPLOAD_DIR: /data/uploads
+      KNOWLEDGE_DIR: /data/knowledge
+      REPORT_DIR: /data/reports
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+    ports:
+      - "8000:8000"
+    volumes:
+      - appdata:/data
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+
+volumes:
+  pgdata:
+  appdata:
