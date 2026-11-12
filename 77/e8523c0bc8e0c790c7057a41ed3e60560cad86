@@ -1,0 +1,181 @@
+.env.example
+  s_704242afb53d2f::t_83175677e1cc12 1-5
+.github/workflows/ci.yml
+  s_704242afb53d2f::t_c7a02a29402f5c 1-48
+.gitignore
+  s_704242afb53d2f::t_5451d81d47d9aa 1-21
+LICENSE
+  s_704242afb53d2f::t_73921ae311da5f 1-21
+README.md
+  s_704242afb53d2f::t_d2056cad44dc86 1-193
+backend/.env.example
+  s_704242afb53d2f::t_3598d81bd007a9 1-15
+backend/Dockerfile
+  s_704242afb53d2f::t_60add96002b695 1-19
+backend/README.md
+  s_704242afb53d2f::t_4ab224660b3a0f 1-5
+backend/alembic.ini
+  s_704242afb53d2f::t_90c3d4acd6df03 1-38
+backend/alembic/env.py
+  s_704242afb53d2f::t_12c641fed25a24 1-43
+backend/alembic/script.py.mako
+  s_704242afb53d2f::t_a1a2d243de5117 1-24
+backend/alembic/versions/0001_initial_schema.py
+  s_704242afb53d2f::t_3bdc64ab148d2b 1-198
+backend/app/__init__.py
+  s_704242afb53d2f::t_08ea982cdeb767 1-3
+backend/app/analyzer/__init__.py
+  s_704242afb53d2f::t_dee851d3927481 1-3
+backend/app/analyzer/risk_analyzer.py
+  s_704242afb53d2f::t_28d72ef381567b 1-152
+backend/app/api/__init__.py
+  s_704242afb53d2f::t_35de3b5b3deccf 1
+backend/app/api/deps.py
+  s_704242afb53d2f::t_621e094561ec0c 1-69
+backend/app/api/v1/__init__.py
+  s_704242afb53d2f::t_a692a7a4782f79 1
+backend/app/api/v1/analyses.py
+  s_704242afb53d2f::t_d5de7be858aa41 1-133
+backend/app/api/v1/auth.py
+  s_704242afb53d2f::t_8df48ebd9bae02 1-56
+backend/app/api/v1/documents.py
+  s_704242afb53d2f::t_5758a1a942d8c2 1-88
+backend/app/api/v1/knowledge.py
+  s_704242afb53d2f::t_33b0ad4802afde 1-58
+backend/app/api/v1/reports.py
+  s_704242afb53d2f::t_5425573bebd083 1-55
+backend/app/api/v1/router.py
+  s_704242afb53d2f::t_f4b0da8c9087e9 1-10
+backend/app/core/__init__.py
+  s_704242afb53d2f::t_1e4671f0034291 1
+backend/app/core/config.py
+  s_704242afb53d2f::t_8bbb797878dd87 1-57
+backend/app/core/database.py
+  s_704242afb53d2f::t_7b6864d9b26840 1-31
+backend/app/core/logging.py
+  s_704242afb53d2f::t_7ac1db21567605 1-27
+backend/app/core/security.py
+  s_704242afb53d2f::t_62183207008975 1-79
+backend/app/core/telemetry.py
+  s_704242afb53d2f::t_4ef52c7f5a1c14 1-23
+backend/app/main.py
+  s_704242afb53d2f::t_f50568aa2a359a 1-70
+backend/app/models/__init__.py
+  s_704242afb53d2f::t_527f260b9eee1f 1-43
+backend/app/models/entities.py
+  s_704242afb53d2f::t_aa4cb41cfed8d9 1-202
+backend/app/models/enums.py
+  s_704242afb53d2f::t_8dc532c4871eb9 1-66
+backend/app/rag/__init__.py
+  s_704242afb53d2f::t_ff8aa4ce8d9dfa 1-4
+backend/app/rag/embeddings.py
+  s_704242afb53d2f::t_5a13c4e2ee056d 1-42
+backend/app/rag/store.py
+  s_704242afb53d2f::t_ccca1d69f6537b 1-96
+backend/app/reporting/__init__.py
+  s_704242afb53d2f::t_35bbf369e7f7cc 1-3
+backend/app/reporting/generator.py
+  s_704242afb53d2f::t_3fc08c5cf78743 1-135
+backend/app/schemas/__init__.py
+  s_704242afb53d2f::t_4e64964afe7405 1-23
+backend/app/schemas/analysis.py
+  s_704242afb53d2f::t_8261d8e1775410 1-74
+backend/app/schemas/auth.py
+  s_704242afb53d2f::t_7013afd8fd760b 1-37
+backend/app/schemas/documents.py
+  s_704242afb53d2f::t_1f2f4c45375a4b 1-36
+backend/app/services/__init__.py
+  s_704242afb53d2f::t_0cd74eedd624a6 1
+backend/app/services/audit.py
+  s_704242afb53d2f::t_21d33fae77fd84 1-31
+backend/app/services/document_parser.py
+  s_704242afb53d2f::t_27d6593b6ab88b 1-62
+backend/app/services/llm.py
+  s_704242afb53d2f::t_ba639105870ef7 1-163
+backend/app/services/storage.py
+  s_704242afb53d2f::t_b86e1653db1ede 1-36
+backend/pyproject.toml
+  s_704242afb53d2f::t_9f871b2b1a64f7 1-68
+backend/scripts/entrypoint.sh
+  s_704242afb53d2f::t_2b8e6eac829e90 1-4
+backend/tests/api/test_health.py
+  s_704242afb53d2f::t_9fb0a00cc9ed28 1-10
+backend/tests/unit/test_llm_mock.py
+  s_704242afb53d2f::t_60d5844577321d 1-18
+backend/tests/unit/test_parser.py
+  s_704242afb53d2f::t_ffcd12e77df6a5 1-18
+backend/tests/unit/test_security.py
+  s_704242afb53d2f::t_77e99667568abb 1-15
+docker-compose.yml
+  s_704242afb53d2f::t_881e86fcfd45f0 1-56
+docs/architecture.md
+  s_704242afb53d2f::t_322a110f3a417d 1-3
+docs/openapi.yaml
+  s_704242afb53d2f::t_7f4c76b3df3511 1-134
+examples/documents/sample_vendor_contract.txt
+  s_704242afb53d2f::t_c94c64bb1f2a79 1-21
+examples/knowledge/gdpr_excerpt.txt
+  s_704242afb53d2f::t_9907632d8a345a 1-10
+examples/knowledge/iso27001_excerpt.txt
+  s_704242afb53d2f::t_d41959970e09c1 1-10
+examples/sample_report/SAMPLE_AUDIT_REPORT.md
+  s_704242afb53d2f::t_ccb3dc42efb546 1-36
+frontend/Dockerfile
+  s_704242afb53d2f::t_cc5a387787c0d9 1-21
+frontend/e2e/smoke.spec.ts
+  s_704242afb53d2f::t_8109bc87205fe3 1-7
+frontend/next-env.d.ts
+  s_704242afb53d2f::t_96c96315592c48 1-2
+frontend/next.config.ts
+  s_704242afb53d2f::t_c15dbc07b70a12 1-8
+frontend/package.json
+  s_704242afb53d2f::t_724174e271901c 1-29
+frontend/playwright.config.ts
+  s_704242afb53d2f::t_068d3e8e33b159 1-11
+frontend/postcss.config.mjs
+  s_704242afb53d2f::t_b616d9a4a1bb15 1-9
+frontend/src/app/dashboard/page.tsx
+  s_704242afb53d2f::t_f81c5e2e5352a5 1-101
+frontend/src/app/findings/page.tsx
+  s_704242afb53d2f::t_abe0400b838bb7 1-128
+frontend/src/app/globals.css
+  s_704242afb53d2f::t_f6f3725ff0eb60 1-16
+frontend/src/app/layout.tsx
+  s_704242afb53d2f::t_0fd0bd81009a71 1-25
+frontend/src/app/login/page.tsx
+  s_704242afb53d2f::t_9063ae90b6f337 1-93
+frontend/src/app/page.tsx
+  s_704242afb53d2f::t_e27cc1a16fb54e 1-5
+frontend/src/app/report/page.tsx
+  s_704242afb53d2f::t_fa6c08b2ec2e18 1-87
+frontend/src/app/settings/page.tsx
+  s_704242afb53d2f::t_8c19f4e70f9983 1-72
+frontend/src/app/upload/page.tsx
+  s_704242afb53d2f::t_1d39daddbb8571 1-83
+frontend/src/components/AppShell.tsx
+  s_704242afb53d2f::t_5a7367c4b3b0bb 1-58
+frontend/src/lib/api.ts
+  s_704242afb53d2f::t_98bebf9a24f23c 1-57
+frontend/tailwind.config.ts
+  s_704242afb53d2f::t_4a4bf21a3aa9ff 1-23
+frontend/tsconfig.json
+  s_704242afb53d2f::t_1ebf737435e538 1-21
+scripts/seed_demo.sh
+  s_704242afb53d2f::t_2716795d4d6a37 1-41
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "77e8523c0bc8e0c790c7057a41ed3e60560cad86",
+  "prompts": {},
+  "sessions": {
+    "s_704242afb53d2f": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "s_704242afb53d2f",
+        "model": "unknown"
+      },
+      "human_author": "Zixsa <50504962+Kozphy@users.noreply.github.com>"
+    }
+  }
+}
